@@ -1,0 +1,4 @@
+*.pyc
+ceca_pass.egg-info
+build
+dist
