@@ -1,0 +1,5 @@
+include LICENSE
+include README.md
+recursive-include ceca_pass *.py
+recursive-include ceca_pass migrations *.py
+recursive-include ceca_pass static *
