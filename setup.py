@@ -18,7 +18,7 @@ setup(
     url='',
     author='Rodrigo N. Carreras',
     author_email='carrerasrodrigo@gmail.com',
-    install_requires=['pycrypto', 'Django>=1.7'],
+    install_requires=['pycrypto', 'Django>=1.7', 'argparse'],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',

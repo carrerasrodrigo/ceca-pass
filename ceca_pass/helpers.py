@@ -1,13 +1,11 @@
 import json
 import os
 import datetime
-import django
 
 from ceca_pass import settings
 from ceca_pass.models import Password
 from ceca_pass.version import version
 from ceca_pass.cipher import Cipher
-from django.conf import settings as dsettings
 from django.db.models import Q
 from django.utils.timezone import now as utcnow
 
@@ -29,8 +27,6 @@ def json_encode_datetime(obj):
 
 
 def dump_to_json():
-    django.setup()
-
     passwords = Password.objects.filter(Q(expire=False) |
         (Q(expire=True) & Q(datetime_expire__gte=utcnow())))
 
@@ -71,8 +67,6 @@ def get_password(project_name, var_name):
 
 
 def dump_to_bash():
-    django.setup()
-
     passwords = Password.objects.filter(Q(expire=False) |
         (Q(expire=True) & Q(datetime_expire__gte=utcnow())))
 
@@ -89,7 +83,6 @@ def dump_to_bash():
 
 
 def patch_bash_file():
-    django.setup()
     with open(settings.CECA_PASS_SYSTEM_BASH_FILE, 'r') as f:
         content = f.read()
 
