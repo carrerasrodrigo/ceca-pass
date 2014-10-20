@@ -13,7 +13,7 @@ The steps to use it are:
 
 ### Installation ###
 ```#!bash
-pip install -e git+https://rodrigocarreras@bitbucket.org/rodrigocarreras/ceca_pass.git#egg=ceca_pass
+pip install -e git+https://github.com/carrerasrodrigo/ceca-pass.git#egg=ceca_pass
 ```
 
 ceca_pass provides an admin interface (thanks to django) that allows you to load your passwords very easily.
